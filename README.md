@@ -16,7 +16,7 @@ To install this project, follow these steps:
 1. Clone the project repository.
 
     ```bash
-    git clone [https://github.com/your-username/MyReactTaskTracker.git](https://github.com/Xahoor72/Task-Tracker)
+    git clone https://github.com/Xahoor72/Task-Tracker
     ```
 
 2. Navigate to the project directory.
@@ -53,6 +53,8 @@ Feel free to explore and enhance the app as needed. Happy task tracking!
  ```bash
     npm i react-beautiful-dnd
  ```
+## Author 
+Zahoor Ahmad  [Xahoor72](https://github.com/Xahoor72)
 
 
 
