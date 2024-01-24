@@ -3,7 +3,7 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-
+import { v4 as uuidv4 } from 'uuid';
 const TaskList = () => {
   const [tasks, setTasks] = useState(() => {
     const storedTasks = localStorage.getItem('tasks');
@@ -26,7 +26,7 @@ const TaskList = () => {
   const addTask = () => {
     if (newTask.trim() !== '') {
       const task = {
-        id: Date.now().toString(),
+        id: uuidv4(),
         name: newTask,
         dateAdded: new Date().toLocaleString(),
         status: 'Incomplete',
@@ -49,17 +49,34 @@ const TaskList = () => {
       }
       return task;
     });
+   
     setTasks(updatedTasks);
   };
 
   const onDragEnd = (result) => {
     if (!result.destination) return;
-    const updatedTasks = Array.from(tasks);
-    const [movedTask] = updatedTasks.splice(result.source.index, 1);
-    updatedTasks.splice(result.destination.index, 0, movedTask);
-
-    setTasks(updatedTasks);
+  console.log(result);
+    const sourceIndex = result.source.index;
+    const destinationIndex = result.destination.index;
+    const sourceTasks = filter === 'Completed' ? completedTasks : incompleteTasks;
+    const updatedTasks = Array.from(sourceTasks);
+  
+    const [movedTask] = updatedTasks.splice(sourceIndex, 1);
+    updatedTasks.splice(destinationIndex, 0, movedTask);
+  
+    if (filter === 'Completed') {
+      setTasks((prevTasks) => [
+        ...prevTasks.filter((task) => task.status === 'Incomplete'),
+        ...updatedTasks,
+      ]);
+    } else {
+      setTasks((prevTasks) => [
+        ...prevTasks.filter((task) => task.status === 'Completed'),
+        ...updatedTasks,
+      ]);
+    }
   };
+  
 
   const incompleteTasks = tasks.filter((task) => task.status === 'Incomplete');
   const completedTasks = tasks.filter((task) => task.status === 'Completed');
@@ -135,7 +152,7 @@ const TaskList = () => {
           <div className="flex flex-col md:flex-row">
             {/* Incomplete Tasks */}
             {filter === 'Incomplete' || filter === 'All' ? (
-              <Droppable droppableId={droppableId}>
+              <Droppable droppableId={droppableId} type="TASK">
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
@@ -152,7 +169,7 @@ const TaskList = () => {
 
             {/* Completed Tasks */}
             {filter === 'Completed' || filter === 'All' ? (
-              <Droppable droppableId={droppableId}>
+              <Droppable droppableId={droppableId} type="TASK">
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
