@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# My TaskTracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Introducing My TaskTracker! This single-page web app built with React helps you conquer your to-do list while staying organized and productive. Create, manage, and complete tasks with ease, all in one convenient place.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+* React
+* ReactDOM
+* Babel
+* Mui icons
+* Tailwind CSS
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To install this project, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the project repository.
 
-### `npm test`
+    ```bash
+    git clone https://github.com/Xahoor72/Task-Tracker
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory.
 
-### `npm run build`
+    ```bash
+    cd Task-Tracker
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install the dependencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server.
 
-### `npm run eject`
+    ```bash
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Open http://localhost:3000 to start tracking!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to explore and enhance the app as needed. Happy task tracking!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tailwind CSS
+You can check the documentation of Tailwind css at https://tailwindcss.com/docs/guides/create-react-app .
+<br>
+Tips for easy Installaton of Tail wind : 
+<br>
+Install it in your current working folder  :
+ ```bash
+     npm install -D tailwindcss
+     npx tailwindcss init
+ ```
+Make these changes to  tailwind.config file 
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+Now replace index.css file with 
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+Now start the server
+ ```bash
+     npm start
+ ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## MUI Icons
 
-## Learn More
+ ```bash
+     npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+ ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## React Beautifull DND
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ ```bash
+    npm i react-beautiful-dnd
+ ```
+## Author 
+Zahoor Ahmad  [Xahoor72](https://github.com/Xahoor72)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
