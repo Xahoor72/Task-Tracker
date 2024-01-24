@@ -16,7 +16,7 @@ To install this project, follow these steps:
 1. Clone the project repository.
 
     ```bash
-    git clone https://github.com/your-username/MyReactTaskTracker.git
+    git clone [https://github.com/your-username/MyReactTaskTracker.git](https://github.com/Xahoor72/Task-Tracker)
     ```
 
 2. Navigate to the project directory.
