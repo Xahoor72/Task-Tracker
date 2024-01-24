@@ -42,41 +42,16 @@ To install this project, follow these steps:
 Feel free to explore and enhance the app as needed. Happy task tracking!
 
 
-## Usage
+## MUI Icons
 
-To use this project, follow these steps:
+ ```bash
+     npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+    ```
 
-1. Open the development server in your browser.
-2. Start coding!
+## React Beautifull DND
 
-## Documentation
+ ```bash
+    npm i react-beautiful-dnd
+    ```
 
-The documentation for this project is available here.
 
-## Visuals
-
-The visuals for this project are available here.
-
-## Support Information
-
-If you need help with this project, please contact me at [email protected]
-
-## Project Roadmap
-
-The project roadmap is available here.
-
-## Project Status
-
-The project status is available here.
-
-## Contribution Guidelines
-
-The contribution guidelines for this project are available here.
-
-## Acknowledgments
-
-The acknowledgments for this project are available here.
-
-## License Information
-
-The license information for this project is available here.
