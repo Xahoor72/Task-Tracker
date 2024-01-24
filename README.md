@@ -46,12 +46,13 @@ Feel free to explore and enhance the app as needed. Happy task tracking!
 
  ```bash
      npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
-    ```
+ ```
 
 ## React Beautifull DND
 
  ```bash
     npm i react-beautiful-dnd
-    ```
+ ```
+
 
 
