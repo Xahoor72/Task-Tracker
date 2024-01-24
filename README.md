@@ -22,7 +22,7 @@ To install this project, follow these steps:
 2. Navigate to the project directory.
 
     ```bash
-    cd MyReactTaskTracker
+    cd Task-Tracker
     ```
 
 3. Install the dependencies.
