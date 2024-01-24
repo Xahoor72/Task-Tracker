@@ -43,14 +43,17 @@ To install this project, follow these steps:
 Feel free to explore and enhance the app as needed. Happy task tracking!
 
 ## Tailwind CSS
-You can check the documentation of Tailwind css at https://tailwindcss.com/docs/guides/create-react-app . 
-Tips for easy Installaton of Tail wind :
-Install it in your current working folder 
+You can check the documentation of Tailwind css at https://tailwindcss.com/docs/guides/create-react-app .
+<br>
+Tips for easy Installaton of Tail wind : 
+<br>
+Install it in your current working folder  :
  ```bash
      npm install -D tailwindcss
      npx tailwindcss init
  ```
-Make these changes to  tailwind.config file
+Make these changes to  tailwind.config file 
+```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -61,10 +64,13 @@ module.exports = {
   },
   plugins: [],
 }
+```
 Now replace index.css file with 
+```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
 Now start the server
  ```bash
      npm start
